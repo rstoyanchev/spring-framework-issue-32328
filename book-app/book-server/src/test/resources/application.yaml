@@ -1,0 +1,2 @@
+server.port: 7777
+book.client.url: http://localhost:${server.port}

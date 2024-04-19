@@ -1,0 +1,20 @@
+// --- Common Libs
+include 'common-lib'
+// ------------------
+
+// --- Book Application
+include 'book-app:book-api'
+include 'book-app:book-client'
+include 'book-app:book-server'
+include 'book-app:book-client-starter'
+// ------------------
+
+// --- Store Application
+include 'store-app:store-server'
+// ------------------
+
+// --- Monolith ("Single Binary") Application
+include 'monolith-app:monolith-server'
+// ------------------
+
+rootProject.name = 'SpringMappingsSample'

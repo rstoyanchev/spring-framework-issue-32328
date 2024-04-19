@@ -1,0 +1,31 @@
+plugins {
+    id 'org.springframework.boot' version '3.2.2' apply false
+    id 'io.spring.dependency-management' version '1.1.4' apply false
+    id 'io.freefair.lombok' version '8.6' apply false
+}
+
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'io.freefair.lombok'
+
+    group = 'com.example'
+    version = '1.0-SNAPSHOT'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation platform('org.springframework.boot:spring-boot-dependencies:3.2.2')
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+}
+

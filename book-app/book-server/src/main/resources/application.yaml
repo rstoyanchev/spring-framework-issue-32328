@@ -1,0 +1,4 @@
+server.port: 8081
+spring.r2dbc:
+  url: r2dbc:h2:mem:///example_db;DB_CLOSE_DELAY=-1;
+  initialization-mode: always

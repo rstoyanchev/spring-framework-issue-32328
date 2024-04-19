@@ -1,0 +1,17 @@
+plugins {
+    id 'org.springframework.boot'
+}
+
+configurations.configureEach {
+    exclude group: 'com.example', module: 'book-client'
+}
+
+dependencies {
+    implementation project(':book-app:book-server')
+    implementation project(':store-app:store-server')
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation project(':book-app:book-api')
+}
